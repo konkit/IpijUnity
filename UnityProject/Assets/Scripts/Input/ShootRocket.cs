@@ -12,11 +12,11 @@ public class ShootRocket : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if( Input.GetKey(KeyCode.Space) ) {
+		if( Input.GetKeyDown(KeyCode.Space) ) {
 			Vector3 spawnPosition = transform.position;
 				spawnPosition += transform.forward * 2.0f;
 			
-			Instantiate ( bulletPrefab, spawnPosition, Quaternion.identity );
+			Instantiate ( bulletPrefab, spawnPosition, transform.rotation );
 		}
 	}
 }

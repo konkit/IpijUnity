@@ -9,7 +9,7 @@ public class ForwardMovement : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		
 		if( Input.GetKey( KeyCode.W ) ) { 
 			transform.position += new Vector3(0.0f, 0.0f, 1.0f);	

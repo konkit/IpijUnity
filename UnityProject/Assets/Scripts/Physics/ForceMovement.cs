@@ -12,11 +12,11 @@ public class ForceMovement : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		if( Input.GetKey( KeyCode.W ) ) { 
 			rigidbody.AddForce( transform.forward * forceValue );	
 		}
-		if( Input.GetKey( KeyCode.S ) ) { 
+		if( Input.GetKey( KeyCode.S ) ) { 			
 			GetComponent<Rigidbody>().AddForce( -transform.forward * forceValue );		
 		}
 		if( Input.GetKey( KeyCode.A ) ) { 
